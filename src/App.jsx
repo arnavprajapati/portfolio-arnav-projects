@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import CurtainLoader from './components/CurtainsLoader.jsx'; 
 import CurtainTransition from './components/CurtainTransition.jsx';
-import AboutMe from './components/AboutMe.jsx';
 import MyProjects from './components/MyProjects.jsx';
 import { Route, Routes, useNavigate, useLocation } from 'react-router-dom';
 import HomePage from './pages/HomePage.jsx';
 import Skills from './components/Skills.jsx';
+import Connect from './components/Connect.jsx';
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -46,7 +46,7 @@ const App = () => {
               <Routes>
                 <Route path='/' element={<HomePage />} />
                 <Route path="/projects" element={<MyProjects />} />
-                <Route path="/about" element={<AboutMe />} />
+                <Route path="/connect" element={<Connect />} />
                 <Route path="/skills" element={<Skills />} />
               </Routes>
             </main>
@@ -59,7 +59,7 @@ const App = () => {
             <Routes>
               <Route path='/' element={<HomePage />} />
               <Route path="/projects" element={<MyProjects />} />
-              <Route path="/about" element={<AboutMe />} />
+              <Route path="/connect" element={<Connect />} />
               <Route path="/skills" element={<Skills />} />
             </Routes>
           </main>

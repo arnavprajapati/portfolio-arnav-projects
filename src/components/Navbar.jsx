@@ -61,12 +61,12 @@ const Navbar = ({ onNavigate, isTransitioning }) => {
                     </button>
 
                     <button
-                        onClick={() => handleNavClick('/about')}
+                        onClick={() => handleNavClick('/connect')}
                         disabled={isTransitioning}
                         className="cursor-pointer text-base text-gray-700 hover:text-blue-600 transition duration-150 flex items-center gap-2 font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                         <FaUser className="text-xl text-gray-500" />
-                        About Me
+                        Connect
                     </button>
                 </div>
 
@@ -114,11 +114,11 @@ const Navbar = ({ onNavigate, isTransitioning }) => {
                             <FaCode className="text-xl text-gray-500" /> Skills
                         </button>
                         <button
-                            onClick={() => handleNavClick('/about')}
+                            onClick={() => handleNavClick('/connect')}
                             disabled={isTransitioning}
                             className="cursor-pointer text-lg text-gray-700 hover:text-blue-600 transition duration-150 flex items-center gap-3 font-semibold p-2 rounded-lg hover:bg-gray-50 text-left disabled:opacity-50 disabled:cursor-not-allowed"
                         >
-                            <FaUser className="text-xl text-gray-500" /> About Me
+                            <FaUser className="text-xl text-gray-500" /> Connect
                         </button>
                         <a
                             onClick={toggleMenu}
