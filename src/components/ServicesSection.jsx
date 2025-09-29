@@ -21,7 +21,7 @@ const ServiceSection = () => {
                         <h3 className="text-2xl font-semibold mb-3">
                             Full Stack Development
                         </h3>
-                        <p className="text-gray-600">
+                        <p className="text-gray-600 text-md font-medium">
                             Building scalable, end-to-end web applications using the MERN stack (MongoDB, Express, React, Node.js).
                         </p>
                     </div>
@@ -31,9 +31,9 @@ const ServiceSection = () => {
                             <FaMobileAlt className="text-3xl" />
                         </div>
                         <h3 className="text-2xl font-semibold mb-3">
-                            Frontend Expertise
+                            Frontend{<br />}Expertise
                         </h3>
-                        <p className="text-gray-600">
+                        <p className="text-gray-600 text-md font-medium">
                             Creating responsive, high-fidelity user interfaces with React, Redux (for state management), Tailwind CSS, and modern JavaScript.
                         </p>
                     </div>
@@ -45,7 +45,7 @@ const ServiceSection = () => {
                         <h3 className="text-2xl font-semibold mb-3">
                             Database Management
                         </h3>
-                        <p className="text-gray-600">
+                        <p className="text-gray-600 text-md font-medium">
                             Designing and optimizing databases with MongoDB for efficient data storage and retrieval.
                         </p>
                     </div>
@@ -55,9 +55,9 @@ const ServiceSection = () => {
                             <FaCloud className="text-3xl" />
                         </div>
                         <h3 className="text-2xl font-semibold mb-3">
-                            API Integration
+                            API{<br />}Integration
                         </h3>
-                        <p className="text-gray-600">
+                        <p className="text-gray-600 text-md font-medium">
                             Developing robust and well-documented RESTful APIs to ensure seamless communication between client and server.
                         </p>
                     </div>
