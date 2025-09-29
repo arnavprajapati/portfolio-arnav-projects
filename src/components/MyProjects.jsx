@@ -1,6 +1,8 @@
 import React from 'react';
 import ChillZone from '../assets/projectsThumbnail/chillzone.png'
 import EduLearn from '../assets/projectsThumbnail/edulearn.png'
+import WardrobeHub from '../assets/projectsThumbnail/wardrobehub.png'
+import CampusCuisine from '../assets/projectsThumbnail/campuscuisine.png'
 
 const MyProjects = () => {
 
@@ -18,11 +20,11 @@ const MyProjects = () => {
                 "The project showcases proficiency in modern web development practices and building complex, interactive applications."
             ],
             image: ChillZone,
-            link: "#"
+            link: "https://chill-zone-frontend.onrender.com/"
         },
         {
             "title": "EduLearn",
-            "year": "2024",
+            "year": "2025",
             "tags": ["React.js", "MongoDB", "Redux", "Video Streaming", "Authentication"],
             "description": [
                 "A feature-rich educational platform for students and educators, built with React.js and Redux Toolkit for efficient state management across all course and user interactions.",
@@ -33,13 +35,43 @@ const MyProjects = () => {
                 "Used a MongoDB database to manage course content, user data, and enrollment records effectively."
             ],
             "image": EduLearn,
-            "link": "#"
+            "link": "https://edulearnfrontend.onrender.com/"
+        },
+        {
+            "title": "Wardrobe Hub",
+            "year": "2025",
+            "tags": ["React.js", "Node.js", "Express.js", "MongoDB", "Razorpay Integration", "Authentication", "E-commerce"],
+            "description": [
+                "A full-stack, responsive e-commerce platform for clothing, Wardrobe Hub, built with the MERN stack (MongoDB, Express.js, React.js, Node.js) to handle high-volume product catalogs and user traffic.",
+                "The platform offers two primary user interfaces: a customer-facing Shopping Portal and a secure Admin Panel.",
+                "Customers can easily browse, search, filter clothes, add items to a cart, and complete purchases using a seamless checkout process.",
+                "Integrated Razorpay for secure and efficient payment processing, supporting multiple payment methods for customer convenience.",
+                "The Admin Panel provides powerful tools for product management (add, edit, delete products), real-time tracking of placed orders, and inventory control.",
+                "Implemented robust user authentication and authorization to secure both customer accounts and admin functionalities."
+            ],
+            "image": WardrobeHub,
+            "link": "https://wardrobehub-frontend.onrender.com/"
+        },
+        {
+            "title": "Campus Cuisine",
+            "year": "2025",
+            "tags": ["React.js", "Node.js", "Express.js", "MongoDB", "Authentication", "Rating & Review", "Refresh Tokens"],
+            "description": [
+                "A full-stack, mobile-responsive platform for students of LPU (Lovely Professional University), Campus Cuisine is built using the MERN stack (MongoDB, Express.js, React.js, Node.js).",
+                "The platform allows students to rate and review the food (dishes) available at different food courts and blocks across the campus.",
+                "Users can easily search, filter, and view ratings and reviews for various food courts, their overall quality, and specific dishes.",
+                "The system offers two main interfaces: a user-facing portal for student reviews and a secure Admin Panel.",
+                "The Admin Panel provides powerful control, enabling administrators to add, edit, and delete food courts, blocks, and dishes.",
+                "Implemented secure, full authentication using Access Tokens for authorizing API requests and Refresh Tokens for persistent user sessions, securing student accounts and admin access."
+            ],
+            "image": CampusCuisine,
+            "link": "https://campus-cuisine-7k65.onrender.com/"
         }
     ];
 
     return (
         <div className="min-h-screen mt-5 bg-white py-12 px-6 md:px-12">
-            <div className="max-w-6xl mx-auto">
+            <div className="max-w-7xl mx-auto">
 
                 <div className="mb-12">
                     <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
@@ -74,7 +106,7 @@ const MyProjects = () => {
                                             {project.tags.map((tag, tagIndex) => (
                                                 <span
                                                     key={tagIndex}
-                                                    className="px-3 py-1 bg-white text-gray-700 rounded-lg text-xs md:text-sm font-medium border border-gray-300 shadow-sm hover:shadow-md transition-shadow"
+                                                    className="px-3 py-1 bg-white text-gray-700 rounded-lg text-xs md:text-sm font-semibold border border-gray-300 shadow-sm hover:shadow-md transition-shadow"
                                                 >
                                                     {tag}
                                                 </span>
@@ -90,7 +122,7 @@ const MyProjects = () => {
                                     {project.description.map((point, pointIndex) => (
                                         <p key={pointIndex} className="text-sm md:text-base text-gray-700 leading-relaxed flex items-start gap-2">
                                             <span className="text-green-500 font-bold text-base shrink-0">✓</span>
-                                            <span>{point}</span>
+                                            <span className='font-medium'>{point}</span>
                                         </p>
                                     ))}
                                 </div>
@@ -98,6 +130,7 @@ const MyProjects = () => {
                                 <a
                                     href={project.link}
                                     className="inline-flex items-center gap-2 mt-4 px-6 py-2.5 bg-gray-900 text-white rounded-xl font-semibold hover:bg-gray-800 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                                    target="_blank"
                                 >
                                     View Live Project
                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

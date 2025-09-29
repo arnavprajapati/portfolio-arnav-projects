@@ -25,7 +25,7 @@ const EducationSection = () => {
                         <div className={`pb-12 text-left`}>
                             <h3 className="text-2xl font-semibold mb-1 text-gray-900">Bachelor of Engineering In Computer Science</h3>
                             <p className="text-md font-medium text-gray-600 mb-2">2023-Now | Lovely Professional University (LPU)</p>
-                            <p className="text-gray-600 leading-relaxed text-md font-medium">Relevant courses include Data Structures and Algorithms, Computer Systems Engineering, and Artificial Intelligence.</p>
+                            <p className="text-gray-600 leading-relaxed text-md font-medium">Relevant Coursework: Web Development (Full-Stack), Data Structures & Algorithms, Computer Systems Engineering and Artificial Intelligence</p>
                         </div>
                     </div>
                     
@@ -37,7 +37,7 @@ const EducationSection = () => {
                             <div className={`w-px flex-grow bg-gray-300`}></div>
                         </div>
                         <div className={`pb-12 text-left`}>
-                            <h3 className="text-2xl font-semibold mb-1 text-gray-900">Dr AK Public School</h3>
+                            <h3 className="text-2xl font-semibold mb-1 text-gray-900">Dr AK Public School Akbarpur</h3>
                             <p className="text-md font-medium text-gray-600 mb-2">2017 - 2022 | (7th to 12th)</p>
                             <p className="text-gray-600 leading-relaxed text-md font-medium">Completed secondary and senior secondary education, focusing on core subjects.</p>
                         </div>
