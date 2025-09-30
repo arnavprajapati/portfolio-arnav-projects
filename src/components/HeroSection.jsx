@@ -23,7 +23,7 @@ const HeroSection = () => {
                     </p>
 
                     <a
-                        href="../../public/Resume.pdf"
+                        href="/Resume.pdf"
                         target='_blank'
                         className="inline-flex items-center justify-center px-8 py-4 bg-gray-800 text-white text-lg font-semibold rounded-xl shadow-2xl hover:bg-gray-700 transition duration-300 gap-3"
                     >
