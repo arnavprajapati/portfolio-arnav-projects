@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaHome, FaFolderOpen, FaUser, FaEnvelope, FaCode, FaBars, FaTimes } from 'react-icons/fa';
+import { FaHome, FaFolderOpen, FaUser, FaEnvelope, FaCode, FaBars, FaTimes, FaWhatsapp } from 'react-icons/fa';
 
 const Navbar = ({ onNavigate, isTransitioning }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -71,11 +71,12 @@ const Navbar = ({ onNavigate, isTransitioning }) => {
                 </div>
 
                 <a
-                    href="#contact"
+                    href="https://wa.me/917235838950?text=Hi!%20I%20found%20your%20portfolio%20and%20would%20love%20to%20connect."
+                    target='_blank'
                     disabled={isTransitioning}
                     className={`cursor-pointer hidden lg:flex px-6 py-3 rounded-full border border-gray-100 items-center shadow-lg gap-3 text-base font-bold whitespace-nowrap`}
                 >
-                    <FaEnvelope className="text-xl " />
+                    <FaWhatsapp className="text-2xl font-semibold" />
                     Contact Me
                 </a>
 

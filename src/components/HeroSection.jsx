@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaPaperPlane, FaClock } from 'react-icons/fa';
+import { FaPaperPlane, FaClock, FaFileDownload } from 'react-icons/fa';
 import Image from '../assets/image.jpg'
 
 const HeroSection = () => {
@@ -23,10 +23,11 @@ const HeroSection = () => {
                     </p>
 
                     <a
-                        href="#contact"
+                        href="../../public/Resume.pdf"
+                        target='_blank'
                         className="inline-flex items-center justify-center px-8 py-4 bg-gray-800 text-white text-lg font-semibold rounded-xl shadow-2xl hover:bg-gray-700 transition duration-300 gap-3"
                     >
-                        Say Hello <FaPaperPlane className="ml-2 text-base" />
+                        Resume <FaFileDownload  className="ml-2 text-base" />
                     </a>
                 </div>
 
