@@ -1,9 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { FaGithub, FaExternalLinkAlt, FaTimes, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import ChillZone from '../assets/projectsThumbnail/chillzone.png'
-import EduLearn from '../assets/projectsThumbnail/edulearn.png'
-import WardrobeHub from '../assets/projectsThumbnail/wardrobehub.png'
-import CampusCuisine from '../assets/projectsThumbnail/campuscuisine.png';
+import EduLearn1 from '../assets/projectsThumbnail/edulearn1.png'
+import EduLearn2 from '../assets/projectsThumbnail/edulearn2.png'
+import EduLearn3 from '../assets/projectsThumbnail/edulearn3.png'
+import EduLearn4 from '../assets/projectsThumbnail/edulearn4.png'
+import WardrobeHub1 from '../assets/projectsThumbnail/wardrobehub1.png'
+import WardrobeHub2 from '../assets/projectsThumbnail/wardrobehub2.png'
+import WardrobeHub3 from '../assets/projectsThumbnail/wardrobehub3.png'
+import WardrobeHub4 from '../assets/projectsThumbnail/wardrobehub4.png'
+import WardrobeHub5 from '../assets/projectsThumbnail/wardrobehub5.png'
+import WardrobeHub6 from '../assets/projectsThumbnail/wardrobehub6.png'
+import CampusCuisine1 from '../assets/projectsThumbnail/campuscuisine1.png';
+import CampusCuisine2 from '../assets/projectsThumbnail/campuscuisine2.png';
+import CampusCuisine3 from '../assets/projectsThumbnail/campuscuisine3.png';
 
 const projectData = [
     {
@@ -18,7 +28,7 @@ const projectData = [
             "Utilized React for the front-end and a combination of Node.js and Socket.io for the scalable, real-time backend.",
             "The project showcases proficiency in modern web development practices and building complex, interactive applications."
         ],
-        image: [ChillZone], 
+        image: [ChillZone],
         link: "https://chill-zone-frontend.onrender.com/",
         github: "#",
         category: ["Socket.io", "MERN"]
@@ -35,7 +45,7 @@ const projectData = [
             "Implemented robust user authentication and authorization to secure different functionalities for educators (e.g., lecture uploading) and students (e.g., course enrollment/video access).",
             "Used a MongoDB database to manage course content, user data, and enrollment records effectively."
         ],
-        "image": [EduLearn], 
+        "image": [EduLearn1, EduLearn2, EduLearn3, EduLearn4],
         "link": "https://edulearnfrontend.onrender.com/",
         github: "#",
         category: ["MERN"]
@@ -52,10 +62,14 @@ const projectData = [
             "The Admin Panel provides powerful tools for product management (add, edit, delete products), real-time tracking of placed orders, and inventory control.",
             "Implemented robust user authentication and authorization to secure both customer accounts and admin functionalities."
         ],
-        "image": [WardrobeHub],
+        "image": [WardrobeHub1, WardrobeHub2, WardrobeHub3, WardrobeHub4, WardrobeHub5, WardrobeHub6],
         "link": "https://wardrobehub-frontend.onrender.com/",
         github: "#",
-        category: ["MERN", "E-commerce"]
+        category: ["MERN", "E-commerce"],
+        credentials: {
+            adminEmail: "admin@shopcart.com",
+            adminPassword: "adminshopcart3106"
+        }
     },
     {
         "title": "Campus Cuisine",
@@ -69,7 +83,7 @@ const projectData = [
             "The Admin Panel provides powerful control, enabling administrators to add, edit, and delete food courts, blocks, and dishes.",
             "Implemented secure, full authentication using Access Tokens for authorizing API requests and Refresh Tokens for persistent user sessions, securing student accounts and admin access."
         ],
-        "image": [CampusCuisine],
+        "image": [CampusCuisine1, CampusCuisine2, CampusCuisine3],
         "link": "https://campus-cuisine-7k65.onrender.com/",
         github: "#",
         category: ["MERN"]
@@ -78,7 +92,7 @@ const projectData = [
 
 const FilterTabs = ({ categories, activeFilter, setActiveFilter }) => {
     return (
-        <div className="flex justify-center w-full"> 
+        <div className="flex justify-center w-full">
             <div className="flex flex-wrap gap-4 mb-10 overflow-x-auto pb-2 border-b border-gray-200">
                 {categories.map((category) => {
                     const isActive = activeFilter === category;
@@ -104,10 +118,10 @@ const FilterTabs = ({ categories, activeFilter, setActiveFilter }) => {
 };
 
 const ProjectModal = ({ project, onClose }) => {
-    const [currentImageIndex, setCurrentImageIndex] = useState(0); 
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     useEffect(() => {
-        setCurrentImageIndex(0); 
+        setCurrentImageIndex(0);
     }, [project]);
 
     if (!project) {
@@ -145,7 +159,7 @@ const ProjectModal = ({ project, onClose }) => {
 
                 <div className="grid md:grid-cols-2 ">
                     <div className="p-6 md:p-8 flex flex-col justify-center bg-gray-50 rounded-l-2xl ">
-                        
+
                         <div className="relative rounded-xl overflow-hidden shadow-xl border border-gray-200 mb-6">
                             <img
                                 src={currentImage}
@@ -188,6 +202,27 @@ const ProjectModal = ({ project, onClose }) => {
                                 </span>
                             ))}
                         </div>
+
+                        {project.credentials && (
+                            <div className="bg-white p-4 rounded-xl border border-dashed border-gray-300 mb-6 shadow-sm">
+                                <h3 className="text-sm font-bold text-gray-800 mb-2 flex items-center gap-2">
+                                    <span className="text-yellow-600">🔑</span> Admin Demo Credentials
+                                </h3>
+                                <p className="text-xstext-gray-600 mb-2 font-medium">
+                                    Use these credentials to explore the admin panel functionality.
+                                </p>
+                                <div className="space-y-1 text-sm">
+                                    <p className="font-semibold text-gray-700">
+                                        <span className="font-mono text-gray-500 mr-2">Email:</span>
+                                        {project.credentials.adminEmail}
+                                    </p>
+                                    <p className="font-semibold text-gray-700">
+                                        <span className="font-mono text-gray-500 mr-2">Password:</span>
+                                        {project.credentials.adminPassword}
+                                    </p>
+                                </div>
+                            </div>
+                        )}
 
                         <div className="flex gap-4">
                             <a
@@ -255,8 +290,8 @@ const MyProjects = () => {
         if (activeFilter === 'All') {
             return projectData;
         }
-        return projectData.filter(project => 
-            Array.isArray(project.category) 
+        return projectData.filter(project =>
+            Array.isArray(project.category)
                 ? project.category.includes(activeFilter)
                 : project.category === activeFilter
         );
@@ -295,12 +330,12 @@ const MyProjects = () => {
                     {filteredProjects.map((project, index) => (
                         <div
                             key={index}
-                            onClick={() => openModal(project)} 
+                            onClick={() => openModal(project)}
                             className="bg-white rounded-xl shadow-lg transition-all duration-300 overflow-hidden border border-gray-200 flex flex-col cursor-pointer"
                         >
                             <div className="relative h-48 overflow-hidden">
                                 <img
-                                    src={getThumbnailImage(project)} 
+                                    src={getThumbnailImage(project)}
                                     alt={project.title}
                                     className="w-full h-full object-cover object-top transition-transform duration-500 "
                                 />
@@ -320,7 +355,7 @@ const MyProjects = () => {
                                 <div className="flex gap-3 pt-3 border-t border-gray-100 mt-auto">
                                     <a
                                         href={project.link}
-                                        onClick={e => e.stopPropagation()} 
+                                        onClick={e => e.stopPropagation()}
                                         className="flex-1 inline-flex items-center justify-center gap-2 px-3 py-2 bg-black text-white rounded-lg font-semibold text-medium shadow-md hover:bg-gray-800"
                                         target="_blank"
                                         rel="noopener noreferrer"
@@ -333,7 +368,7 @@ const MyProjects = () => {
                                     {project.github && (
                                         <a
                                             href={project.github}
-                                            onClick={e => e.stopPropagation()} 
+                                            onClick={e => e.stopPropagation()}
                                             className="inline-flex items-center justify-center p-3 bg-gray-100 text-gray-800 rounded-lg hover:bg-gray-200 shadow-md"
                                             target="_blank"
                                             rel="noopener noreferrer"
@@ -344,7 +379,7 @@ const MyProjects = () => {
                                     )}
 
                                     <button
-                                        onClick={(e) => { e.stopPropagation(); openModal(project); }} 
+                                        onClick={(e) => { e.stopPropagation(); openModal(project); }}
                                         className="inline-flex items-center justify-center p-3 bg-gray-100 text-gray-800 rounded-lg hover:bg-gray-200  shadow-md cursor-pointer font-medium"
                                         aria-label={`View Details for ${project.title}`}
                                     >
