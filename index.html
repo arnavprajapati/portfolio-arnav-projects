@@ -6,7 +6,7 @@
   <link rel="icon" type="image/svg+xml" href="./src/assets/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>
-    Arnav Portfolio 
+    Arnav Portfolio
   </title>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EXK7H6DETE"></script>
   <script>
@@ -21,6 +21,25 @@
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
+  <script>
+  const isLively = navigator.userAgent.includes("Lively");
+
+  if (isLively) {
+    setTimeout(() => {
+      location.reload();
+    }, 1000);
+
+    window.addEventListener("keydown", (e) => {
+      if (e.ctrlKey && e.key.toLowerCase() === "r") {
+        e.preventDefault();
+        location.reload();
+      }
+    });
+
+  }
+</script>
+
+
 </body>
 
 </html>
