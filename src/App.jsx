@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
-import CurtainLoader from './components/CurtainsLoader.jsx'; 
+import CurtainLoader from './components/CurtainsLoader.jsx';
 import CurtainTransition from './components/CurtainTransition.jsx';
 import MyProjects from './components/MyProjects.jsx';
 import { Route, Routes, useNavigate, useLocation } from 'react-router-dom';
@@ -19,17 +19,20 @@ const App = () => {
     setIsLoading(false);
     setTimeout(() => {
       setShowContent(true);
+      navigate('/');
     }, 100);
   };
 
-  const handleNavigation = (path) => {
-    // if (isTransitioning || location.pathname === path) return;
-    
-    setIsTransitioning(true);
-    
-    setTimeout(() => {
-      navigate(path);
-    }, 1400);
+  const handleNavigation = (path, isLogoClick = false) => {
+    if (isLogoClick) {
+      setShowContent(false);
+      setIsLoading(true);
+    } else {
+      setIsTransitioning(true);
+      setTimeout(() => {
+        navigate(path);
+      }, 1400);
+    }
   };
 
   const handleTransitionComplete = () => {
@@ -63,9 +66,9 @@ const App = () => {
               <Route path="/skills" element={<Skills />} />
             </Routes>
           </main>
-          
-          <CurtainTransition 
-            isTransitioning={isTransitioning} 
+
+          <CurtainTransition
+            isTransitioning={isTransitioning}
             onComplete={handleTransitionComplete}
           />
         </>

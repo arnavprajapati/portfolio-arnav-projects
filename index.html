@@ -21,25 +21,6 @@
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
-  <script>
-  const isLively = navigator.userAgent.includes("Lively");
-
-  if (isLively) {
-    setTimeout(() => {
-      location.reload();
-    }, 1000);
-
-    window.addEventListener("keydown", (e) => {
-      if (e.ctrlKey && e.key.toLowerCase() === "r") {
-        e.preventDefault();
-        location.reload();
-      }
-    });
-
-  }
-</script>
-
-
 </body>
 
 </html>

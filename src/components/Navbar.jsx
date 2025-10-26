@@ -8,11 +8,11 @@ const Navbar = ({ onNavigate, isTransitioning }) => {
         setIsMenuOpen(!isMenuOpen);
     };
 
-    const handleNavClick = (path) => {
+    const handleNavClick = (path, isLogoClick = false) => {
         if (isTransitioning) return;
 
         if (onNavigate) {
-            onNavigate(path);
+            onNavigate(path, isLogoClick);
         }
         if (isMenuOpen) {
             toggleMenu();
@@ -24,7 +24,7 @@ const Navbar = ({ onNavigate, isTransitioning }) => {
             <div className="flex items-center justify-between w-full max-w-7xl px-4 md:px-12">
 
                 <button
-                    onClick={() => handleNavClick('/')}
+                    onClick={() => handleNavClick('/', true)}
                     disabled={isTransitioning}
                     className="cursor-pointer px-3 py-2 md:px-6 md:py-3 rounded-full border border-gray-100 flex items-center shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
                 >
