@@ -14,6 +14,8 @@ import WardrobeHub6 from '../assets/projectsThumbnail/wardrobehub6.png'
 import CampusCuisine1 from '../assets/projectsThumbnail/campuscuisine1.png';
 import CampusCuisine2 from '../assets/projectsThumbnail/campuscuisine2.png';
 import CampusCuisine3 from '../assets/projectsThumbnail/campuscuisine3.png';
+import DriveBackend1 from '../assets/projectsThumbnail/driveBackend1.png'
+import DriveBackend2 from '../assets/projectsThumbnail/driveBackend2.png'
 
 const projectData = [
     {
@@ -65,7 +67,7 @@ const projectData = [
         "image": [WardrobeHub1, WardrobeHub2, WardrobeHub3, WardrobeHub4, WardrobeHub5, WardrobeHub6],
         "link": "https://wardrobehub-frontend.onrender.com/",
         github: "#",
-        category: ["MERN", "E-commerce"],
+        category: ["MERN"],
         credentials: {
             adminEmail: "admin@shopcart.com",
             adminPassword: "adminshopcart3106"
@@ -87,7 +89,24 @@ const projectData = [
         "link": "https://campus-cuisine-7k65.onrender.com/",
         github: "#",
         category: ["MERN"]
+    },
+    {
+        "title": "Online Drive Backend",
+        "year": "2025",
+        "tags": ["Core Node.js", "File System", "Streams", "HTTP Module", "File Upload", "Backend"],
+        "description": [
+            "A lightweight Google Drive–like backend built entirely using Core Node.js modules — without any frameworks like Express.",
+            "Supports essential file operations such as upload (with real-time progress), preview, download, rename, and delete.",
+            "Implements stream-based file handling for efficient performance and lower memory usage, even with large files.",
+            "Developed a minimal frontend using React only for local testing and demonstration purposes (main focus on backend logic).",
+            "Ready for deployment, featuring clean architecture and modular Node.js design."
+        ],
+        "image": [DriveBackend1, DriveBackend2],
+        "link": "https://www.linkedin.com/posts/arnav-prajapati_nodejs-reactjs-webdevelopment-activity-7351300522894659584-EO9m?utm_source=share&utm_medium=member_desktop&rcm=ACoAADB5CecBRUA60TAWPnopnxJu59CHXyXJkMU",
+        "github": "#",
+        "category": ["Backend"],
     }
+
 ];
 
 const FilterTabs = ({ categories, activeFilter, setActiveFilter }) => {
@@ -272,7 +291,7 @@ const MyProjects = () => {
     const [selectedProject, setSelectedProject] = useState(null);
     const [activeFilter, setActiveFilter] = useState('All');
 
-    const categories = ['All', 'MERN', 'Socket.io', 'E-commerce'];
+    const categories = ['All', 'MERN', 'Backend', 'Socket.io'];
 
     const openModal = (project) => {
         setSelectedProject(project);
